@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sweep/sweep",
+    "pages/myself/myself",
+    "pages/detail/detail",
+    "pages/appointmentRecord/appointmentRecord",
+    "pages/consultRecord/consultRecord",
+    "pages/appointment/appointment",
+    "pages/consult/consult",
+    "pages/sao/sao",
+    "pages/know/know"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#44b29f",
+    "list": [
+      {
+        "pagePath": "pages/sweep/sweep",
+        "text": "扫码取号",
+        "iconPath": "image/sweep.png",
+        "selectedIconPath": "image/sweeps.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "医生列表",
+        "iconPath": "image/doctor.png",
+        "selectedIconPath": "image/doctors.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/mys.png"
+      }
+    ]
+  }
+}
