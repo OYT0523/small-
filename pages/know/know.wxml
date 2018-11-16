@@ -1,0 +1,7 @@
+<!-- know.wxml -->
+<view style='margin-top:50rpx;'>
+<block wx:for="{{knows}}" wx:for-item = "item" wx:key="list">
+  <view style='margin-left:50rpx;margin-right:50rpx;margin-bottom:10rpx;'>{{item}}</view>
+</block>
+</view>
+

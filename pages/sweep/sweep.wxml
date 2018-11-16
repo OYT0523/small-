@@ -1,0 +1,7 @@
+<!-- sweep.wxml -->
+<view class='container'>
+   <image src='/image/scansion.png' class='img1'></image>
+   <button class='offer' bindtap='click'>扫码取号</button>
+   <view class="show">{{show}}</view>
+   <text>点击扫码获取排队号码</text>
+</view>

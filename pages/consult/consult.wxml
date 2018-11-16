@@ -1,0 +1,43 @@
+	<!-- 聊天内容 -->
+<!-- <view id='news'> -->
+  <scroll-view scroll-y="true" id="history" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"> 
+   <block wx:for="{{newsList}}" wx:for-item = "item" wx:key>
+    <!--别人的 -->
+    <view wx:if="{{item.type == 'chat' || item.from_to == 0}}">
+      <view>
+        <text class='chat-time'>{{item.receiveTime || item.create_time}}</text>
+      </view>
+      <view class='other-record'>
+        <view class='img' style='width:70rpx;height:70rpx;'>
+         <image class='other-head-img' src='{{head}}'  style='width:70rpx;height:70rpx'></image>
+        </view>
+        <view class='other-record-content-triangle'></view>
+        <view class='other-record-content'>
+        {{item.data || item.content}}
+        </view>
+      </view>
+    </view>
+    <!--别人的 -->
+    <!--自己的记录 -->
+    <view wx:else>
+     <view>
+       <text class='chat-time'>{{item.time || item.create_time}}</text> 
+     </view>
+     <view class='own-record'>
+      <view class='own-record-content'>{{item.content || item.msg}}</view>
+      <view class='own-record-content-triangle'></view>
+      <view class='imgs' style='width:70rpx;height:70rpx;'>
+          <image class='own-head-img' src='{{UserInfo.avatarUrl}}' style='width:70rpx;height:70rpx'></image>
+      </view>
+     </view>
+    </view>
+    <!-- 自己的记录 -->
+   </block>
+    <view id='bottom'>哈哈哈</view>
+  </scroll-view> 
+<!-- </view> -->
+<!-- 表单 -->
+<view class='entry'>
+    <input type='text' placeholder='请输入内容' bindinput="substance" placeholder-class="place" value="{{moren}}"></input>
+    <text class='sendMessage' bindtap='send'>发送</text>
+</view>

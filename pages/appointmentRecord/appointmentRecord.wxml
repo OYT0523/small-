@@ -1,0 +1,130 @@
+<view class='appointments'>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">
+          已提交
+          <text class='point' hidden='{{untreatedPoint}}'></text>
+        </view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNavs">
+          已同意
+          <text class='point' hidden='{{agreePoint}}'></text>
+        </view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNavz">
+          已拒绝
+          <text class='point' hidden='{{refusePoint}}'></text>
+        </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0]}}" hidden='{{shows}}'>
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{untreated}}" wx:for-item = "item"  wx:key="*this">       
+                  <view class='msg'>
+                    <view class='patient'>
+                      <image src='{{item.avatar}}'></image>
+                        <view class='Info'>
+                           <view class='name'>患者姓名: {{item.realname}} </view>
+                           <view class='time'>发起预约时间: {{item.create_time}}</view>                       
+                        </view>
+                      <text class='status'>未处理</text>
+                    </view>
+                    <view class='doctorInforation'>
+                      <view class='doctorName'>
+                        <image src='/image/doctorName.png'></image>
+                        <text>预约医生: {{item.doctor_name}}</text>
+                      </view>
+                      <text class='cancel' bindtap='canc' data-oppoID = "{{item.appointment_id}}">取消预约</text>
+                      <view class='doctorTime'>
+                        <image src='/image/time.png'></image>                      
+                        <text style='float:left'>预约时间:  {{item.date}}</text>
+                        <text class='duans'>
+                                          {{item.time == 900?'9:00-9:30':'' || item.time == 930?'9:30-10:00':'' || item.time == 1630?'16:30-17:00':'' || item.time == 1600?'16:00-16:30':'' || item.time == 1530?'15:30-16:00':''|| item.time == 1030?'10:30-11:00':'' || item.time == 1100?'11:00-11:30':'' || item.time == 1130?'11:30-12:00':'' || item.time == 1300?'13:00-13:30':'' || item.time == 1330?'13:30-14:00':'' || item.time == 1430?'14:30-15:00':'' || item.time == 1500?'15:00-15:30':'' || item.time == 1000?'10:00-10:30':'' || item.time == 1400?'14:00-14:30':''}}
+                                  
+                        </text>                   
+                      </view>
+                    </view>        
+                  </view>   
+                </block>
+                <view hidden='{{show}}'>
+                    <view class='unauthorized'>{{recorde}}</view> 
+                </view>
+            </scroll-view>
+        </swiper-item>
+         <swiper-item wx:for="{{[1]}}" hidden='{{shows}}'>
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{agree}}" wx:for-item = "item" wx:key="*this">       
+                  <view class='msg'>
+                    <view class='patient'>
+                      <image src='{{item.avatar}}'></image>
+                       <view class='Info'>
+                           <view class='name'>患者姓名: {{item.realname}} </view>
+                           <view class='time'>发起预约时间: {{item.create_time}}</view>                       
+                        </view>
+                      <text class='status'>已同意</text>
+                    </view>
+                    <view class='doctorInforation'>
+                      <view class='doctorName'>
+                        <image src='/image/doctorName.png'></image>
+                        <text>预约医生:  {{item.doctor_name}}</text>
+                      </view>
+                      <text class='cancel' bindtap='cancl' data-oppoID = "{{item.appointment_id}}">取消预约</text>
+                      <view class='doctorTime'>
+                        <image src='/image/time.png'></image>
+                        <text style='float:left'>预约时间:  {{item.date}}</text>
+                         <text class='duans'>
+                                          {{item.time == 900?'9:00-9:30':'' || item.time == 930?'9:30-10:00':'' || item.time == 1630?'16:30-17:00':'' || item.time == 1600?'16:00-16:30':'' || item.time == 1530?'15:30-16:00':''|| item.time == 1030?'10:30-11:00':'' || item.time == 1100?'11:00-11:30':'' || item.time == 1130?'11:30-12:00':'' || item.time == 1300?'13:00-13:30':'' || item.time == 1330?'13:30-14:00':'' || item.time == 1430?'14:30-15:00':'' || item.time == 1500?'15:00-15:30':'' || item.time == 1000?'10:00-10:30':'' || item.time == 1400?'14:00-14:30':''}}
+                                     
+                        </text>   
+                      </view>
+                    </view>        
+                  </view>
+                </block>
+                 <view hidden='{{showhide}}'>
+                    <view class='unauthorized'>{{recorde}}</view> 
+                </view>
+            </scroll-view>
+        </swiper-item>
+         <swiper-item wx:for="{{[2]}}"  hidden='{{shows}}'>
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{refused}}" wx:for-item = "item" wx:key="*this">       
+                  <view class='msg'>
+                    <view class='patient'>
+                      <image src='{{item.avatar}}'></image>
+                       <view class='Info'>
+                           <view class='name'>患者姓名: {{item.realname}} </view>
+                           <view class='time'>发起预约时间: {{item.create_time}}</view>                       
+                        </view>
+                      <text class='status'>已拒绝</text>
+                    </view>
+                    <view class='doctorInforation'>
+                      <view class='doctorName'>
+                        <image src='/image/doctorName.png'></image>
+                        <text>预约医生:  {{item.doctor_name}}</text>
+                      </view>
+                      <!-- <view class='doctorTel'>
+                        <image src='/image/tel.png'></image>
+                        <text>医生电话:  {{item.doctor_phone}}</text>
+                      </view> -->
+                      <view class='doctorTime'>
+                        <image src='/image/time.png'></image>
+                        <text style='float:left'>预约时间:  {{item.date}}</text>
+                         <text class='duans'>
+                                          {{item.time == 900?'9:00-9:30':'' || item.time == 930?'9:30-10:00':'' || item.time == 1630?'16:30-17:00':'' || item.time == 1600?'16:00-16:30':'' || item.time == 1530?'15:30-16:00':''|| item.time == 1030?'10:30-11:00':'' || item.time == 1100?'11:00-11:30':'' || item.time == 1130?'11:30-12:00':'' || item.time == 1300?'13:00-13:30':'' || item.time == 1330?'13:30-14:00':'' || item.time == 1430?'14:30-15:00':'' || item.time == 1500?'15:00-15:30':'' || item.time == 1000?'10:00-10:30':'' || item.time == 1400?'14:00-14:30':''}}
+                                
+                        </text>   
+                      </view>
+                    </view>        
+                  </view>     
+                </block>
+                 <view hidden='{{showhides}}'>
+                    <view class='unauthorized'>{{recorde}}</view> 
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
+ <!-- <view hidden='{{show}}' class='unauthorized'>{{recorde}}</view> -->
+
+ <!-- 模糊层 -->
+<view class='loading' hidden='{{flags}}'>
+   
+</view>

@@ -1,0 +1,165 @@
+page{ background-color: #f8fcfb;}
+.entry{position: fixed;bottom: 0;height: 150rpx;width: 100%;display: block;background-color: #fff;}
+.entry input{width: 65%;height: 90rpx;background-color: #f3f3f3;margin-left: 30rpx;margin-top: 30rpx;border-radius: 50rpx;}
+.place{margin-left:30rpx;font-size: 32rpx;}
+.entry text{width: 25%;height: 90rpx;background-color:#45b29f;position: absolute;right: 30rpx;top: 30rpx;text-align: center;line-height: 90rpx;color: #fff;border-radius: 50rpx;}
+.message{overflow: scroll;}
+.message .what{display: block;}
+.self{text-align: right;display: block;margin-bottom: 20rpx;}
+.other{text-align: left;}
+.self image{width: 100rpx;height: 100rpx;border: 1px solid #44b29f;border-radius:50%;margin-right: 20rpx;}
+.other image{width: 100rpx;height: 100rpx;margin-left: 20rpx;border-radius:50%;}
+.self text{height:auto;}
+
+.chat-time { 
+ text-align: center; 
+ padding: 5rpx 20rpx 5rpx 20rpx; 
+ width: 200rpx; 
+ font-size: 26rpx; 
+} 
+ 
+.new_top_txt { 
+ width: 50%; 
+ position: relative; 
+ top: 38rpx; 
+ text-align: center; 
+ margin: 0 auto; 
+ font-size: 30rpx; 
+ color: #787878; 
+ background-color: #f7f7f7; 
+} 
+ 
+/* 聊天内容 */
+ 
+/* #news{ 
+ text-align: center;
+ width: 100%;
+ height:1000rpx;
+}  */
+ 
+#history { 
+ text-align: center;
+ height:1000rpx;
+ width: 100%;
+ font-size: 28rpx; 
+ line-height: 80rpx; 
+ word-break: break-all;
+ padding-bottom: 200rpx;
+}  
+.img_null { 
+ height: 60rpx; 
+} 
+ 
+.l{ 
+ height: 5rpx; 
+ width: 20%; 
+ margin-top: 30rpx; 
+ color: #000; 
+} 
+ 
+/* 聊天 */
+ 
+.my_right { 
+ float: right; 
+ position: relative; 
+ right: 40rpx; 
+} 
+ 
+.you_left { 
+ float: left; 
+ position: relative; 
+ left: 5rpx; 
+} 
+ 
+.new_img { 
+ width: 100rpx; 
+ height: 100rpx; 
+ border-radius: 50%; 
+} 
+ 
+.sanjiao { 
+ top: 20rpx; 
+ position: relative; 
+ width: 0px; 
+ height: 0px; 
+ border-width: 10px; 
+ border-style: solid; 
+} 
+ 
+.my { 
+ border-color: transparent transparent transparent #95d4ff; 
+} 
+ 
+.you { 
+ border-color: transparent #95d4ff transparent transparent; 
+} 
+ 
+.sendmessage { 
+ background-color: white; 
+ width: 100%; 
+ position: fixed; 
+ bottom: 0rpx; 
+ display: flex; 
+ flex-direction: row; 
+} 
+.other-record-content{
+ background-color: #fff;
+ width: auto ！important;
+ border-radius: 7px;  
+ padding: 0rpx 20rpx 0rpx 20rpx;
+}
+.other-record{
+ display: flex;
+ justify-content:flex-start;
+ padding-right: 30rpx;
+}
+.img{
+ margin: 10rpx 10rpx 10rpx 10rpx;
+}
+.other-head-img{
+ border-radius:50%;
+}
+.other-record-content-triangle{ 
+width: 0; 
+height: 0; 
+border-top: 20rpx solid transparent; 
+border-right: 40rpx solid #fff; 
+border-bottom: 15rpx solid transparent;
+margin-top: 20rpx; 
+}
+.own-record{
+ display: flex;
+ justify-content:flex-end;
+}
+.own-record-content{
+ background-color:#45b29f;
+ width: auto ！important;
+ color:#fff;
+ border-radius:7px;  
+ padding: 0rpx 20rpx 0rpx 20rpx;
+ margin-left: 50rpx;
+}
+.own-record-content-triangle { 
+width: 0; 
+height: 0; 
+border-top: 20rpx solid transparent; 
+border-left: 40rpx solid #45b29f; 
+border-bottom: 20rpx solid transparent; 
+margin-top: 20rpx; 
+}
+.imgs{
+   margin: 10rpx 10rpx 10rpx 10rpx;
+}
+.own-head-img{
+ border-radius:50%;
+}
+::-webkit-scrollbar{
+ width: 0;
+ height: 0;
+ color: transparent;
+}
+#bottom{
+ opacity: 0;
+ width: 60px;
+ height: 100px
+}

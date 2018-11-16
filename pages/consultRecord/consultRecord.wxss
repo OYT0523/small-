@@ -1,0 +1,15 @@
+/* pages/consultRecord/consultRecord.wxss */
+page{background-color: #fff;text-align: center;height: 100%}
+.consults{height: 150rpx;}
+.consults image{width: 100%;height: 100%;border-radius:50%;}
+.mesg{height:100%;border-bottom: 1px solid #dedede;margin-left: 155rpx;}
+.mesg .status{float: left;text-align: left;width: 300rpx;margin-top:25rpx;}
+.name{color: #292929;font-size: 30rpx;margin-bottom: 10rpx;width: 120rpx;}
+.tomm{color: #878787;font-size: 25rpx;height: 60rpx;}
+.time{float: right;width: 290rpx;}
+.times{color: #8b8b8b;font-size: 28rpx;margin-bottom: 18rpx;margin-top:25rpx;margin-right:20rpx;width: 100%}
+.num{width: 30rpx;height: 30rpx;color: #fff;background-color: #fa3838;border-radius:50%;font-size: 24rpx;display: block;float: right;margin-right:35rpx;}
+
+.imgs{width: 100rpx;height: 100rpx;border: 1px solid #44b29f;border-radius:50%;float: left;margin-left: 30rpx;margin-top: 25rpx;margin-right: 25rpx;}
+
+.records{margin-top:400rpx;}

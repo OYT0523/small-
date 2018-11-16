@@ -1,0 +1,156 @@
+<view class='wrap'>
+  <view>
+    <view class='date-show'>
+      <view class='lt-arrow' bindtap='lastMonth'>
+        <text>></text>
+      </view>
+      {{year}}-{{month}}
+      <view class='rt-arrow' bindtap='nextMonth'>
+        <text>></text>
+      </view>
+    </view>
+  </view>
+  <view class='header'>
+    <view wx:for='{{date}}' style="{{index == todayIndex?'color:#39dbbd':''}}" wx:for-index="index" class="{{(index == todayIndex) && isTodayWeek? 'weekMark':''}}">
+      {{item}}
+    </view>
+  </view>
+  <view class='date-box'>
+    <view wx:for='{{dateArr}}' class='{{istoday == item.isToday ? "nowDay" : "" }}' data-date='{{item.isToday}}' catchtap='clicks' wx:for-index="index" style='{{key==index?"color:#fff;	background-color:#f27e45;border-radius:50%;text-align:center;position:relative;":""}}'
+      data-index='{{index}}'>
+      <view class='date-head'>
+        <view>{{item.dateNum}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='morning'>
+  <view class='time'>
+    <image src='/image/morning.png'></image>
+    <text>上午</text>
+  </view>
+  <view style='background-color:#fff;overflow:hidden;margin-bottom:45rpx;padding-bottom:2px;' class='oppo'>
+    <view class="appotime {{list[800] == 1?'appointment':''}}{{list[800] == 2?'full':''}}{{list[800] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="800" data-status='{{list[800]}}'>
+      <text style="color:{{list[800] == 0?'#ababab':''}} {{list[800] == 1?'#fff':''}} {{list[800] == 2?'#ff7979':''}}">8:00-8:30</text>
+      <text style="color:{{list[800] == 0?'#ababab':''}} {{list[800] == 1?'#fff':''}}  {{list[800] == 2?'#ff7979':''}}">{{list[800] == 1?"可预约":''}}{{list[800] == 0?"不可预约":''}}{{list[800] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[830] == 1?'appointment':''}}{{list[830] == 2?'full':''}}{{list[830] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="830" data-status='{{list[830]}}'>
+      <text style="color:{{list[830] == 0?'#ababab':''}} {{list[830] == 1?'#fff':''}}  {{list[830] == 2?'#ff7979':''}}">8:30-9:00</text>
+      <text style="color:{{list[830] == 0?'#ababab':''}} {{list[830] == 1?'#fff':''}}  {{list[830] == 2?'#ff7979':''}}">{{list[830] == 1?"可预约":''}} {{list[830] == 0?"不可预约":''}} {{list[830] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[900] == 1?'appointment':''}}{{list[900] == 2?'full':''}}{{list[900] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="900" data-status='{{list[900]}}'>
+      <text style="color:{{list[900] == 0?'#ababab':''}} {{list[900] == 1?'#fff':''}}  {{list[900] == 2?'#ff7979':''}}">9:00-9:30</text>
+      <text style="color:{{list[900] == 0?'#ababab':''}} {{list[900] == 1?'#fff':''}}  {{list[900] == 2?'#ff7979':''}}">{{list[900] == 1?"可预约":''}}{{list[900] == 0?"不可预约":''}}{{list[900] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[930] == 1?'appointment':''}}{{list[930] == 2?'full':''}}{{list[930] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="930" data-status='{{list[930]}}'>
+      <text style="color:{{list[930] == 0?'#ababab':''}} {{list[930] == 1?'#fff':''}}  {{list[930] == 2?'#ff7979':''}}">9:30-10:00</text>
+      <text style="color:{{list[930] == 0?'#ababab':''}} {{list[930] == 1?'#fff':''}}  {{list[930] == 2?'#ff7979':''}}">{{list[930] == 1?"可预约":''}}{{list[930] == 0?"不可预约":''}}{{list[930] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1000] == 1?'appointment':''}}{{list[1000] == 2?'full':''}}{{list[1000] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1000" data-status='{{list[1000]}}'>
+      <text style="color:{{list[1000] == 0?'#ababab':''}} {{list[1000] == 1?'#fff':''}}  {{list[1000] == 2?'#ff7979':''}}">10:00-10:30</text>
+      <text style="color:{{list[1000] == 0?'#ababab':''}} {{list[1000] == 1?'#fff':''}}  {{list[1000] == 2?'#ff7979':''}}">{{list[1000] == 1?"可预约":''}}{{list[1000] == 0?"不可预约":''}}{{list[1000] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1030] == 1?'appointment':''}}{{list[1030] == 2?'full':''}}{{list[1030] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1030" data-status='{{list[1030]}}'>
+      <text style="color:{{list[1030] == 0?'#ababab':''}} {{list[1030] == 1?'#fff':''}}  {{list[1030] == 2?'#ff7979':''}}">10:30-11:00</text>
+      <text style="color:{{list[1030] == 0?'#ababab':''}} {{list[1030] == 1?'#fff':''}}  {{list[1030] == 2?'#ff7979':''}}">{{list[1030] == 1?"可预约":''}}{{list[1030] == 0?"不可预约":''}}{{list[1030] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1100] == 1?'appointment':''}}{{list[1100] == 2?'full':''}}{{list[1100] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1100" data-status='{{list[1100]}}'>
+      <text style="color:{{list[1100] == 0?'#ababab':''}} {{list[1100] == 1?'#fff':''}}  {{list[1100] == 2?'#ff7979':''}}">11:00-11:30</text>
+      <text style="color:{{list[1100] == 0?'#ababab':''}} {{list[1100] == 1?'#fff':''}}  {{list[1100] == 2?'#ff7979':''}}">{{list[1100] == 1?"可预约":''}}{{list[1100] == 0?"不可预约":''}}{{list[1100] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1130] == 1?'appointment':''}}{{list[1130] == 2?'full':''}}{{list[1130] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1130" data-status='{{list[1130]}}'>
+      <text style="color:{{list[1130] == 0?'#ababab':''}} {{list[1130] == 1?'#fff':''}}  {{list[1130] == 2?'#ff7979':''}}">11:30-12:00</text>
+      <text style="color:{{list[1130] == 0?'#ababab':''}} {{list[1130] == 1?'#fff':''}}  {{list[1130] == 2?'#ff7979':''}}">{{list[1130] == 1?"可预约":''}}{{list[1130] == 0?"不可预约":''}}{{list[1130] == 2?"只接受门诊":''}}</text>
+    </view>
+  </view>
+</view>
+<view class='afternoon' style='padding-bottom:42rpx;border-bottom:none'>
+  <view class='times'>
+    <image src='/image/afternoon.png'></image>
+    <text>下午</text>
+  </view>
+  <view style='background-color: #fff;;overflow: hidden;padding-bottom:2px' class='oppo'>
+    <view class="appotime {{list[1330] == 1?'appointment':''}}{{list[1330] == 2?'full':''}}{{list[1330] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1330" data-status='{{list[1330]}}'>
+      <text style="color:{{list[1330] == 0?'#ababab':''}} {{list[1330] == 1?'#fff':''}}  {{list[1330] == 2?'#ff7979':''}}">13:30-14:00</text>
+      <text style="color:{{list[1330] == 0?'#ababab':''}} {{list[1330] == 1?'#fff':''}}  {{list[1330] == 2?'#ff7979':''}}">{{list[1330] == 1?"可预约":''}}{{list[1330] == 0?"不可预约":''}}{{list[1330] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1400] == 1?'appointment':''}}{{list[1400] == 2?'full':''}}{{list[1400] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1400" data-status='{{list[1400]}}'>
+      <text style="color:{{list[1400] == 0?'#ababab':''}} {{list[1400] == 1?'#fff':''}}  {{list[1400] == 2?'#ff7979':''}}">14:00-14:30</text>
+      <text style="color:{{list[1400] == 0?'#ababab':''}} {{list[1400] == 1?'#fff':''}}  {{list[1400] == 2?'#ff7979':''}}">{{list[1400] == 1?"可预约":''}}{{list[1400] == 0?"不可预约":''}}{{list[1400] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1430] == 1?'appointment':''}}{{list[1430] == 2?'full':''}}{{list[1430] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1430" data-status='{{list[1430]}}'>
+      <text style="color:{{list[1430] == 0?'#ababab':''}} {{list[1430] == 1?'#fff':''}}  {{list[1430] == 2?'#ff7979':''}}">14:30-15:00</text>
+      <text style="color:{{list[1430] == 0?'#ababab':''}} {{list[1430] == 1?'#fff':''}}  {{list[1430] == 2?'#ff7979':''}}">{{list[1430] == 1?"可预约":''}}{{list[1430] == 0?"不可预约":''}}{{list[1430] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1500] == 1?'appointment':''}}{{list[1500] == 2?'full':''}}{{list[1500] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1500" data-status='{{list[1500]}}'>
+      <text style="color:{{list[1500] == 0?'#ababab':''}} {{list[1500] == 1?'#fff':''}}  {{list[1500] == 2?'#ff7979':''}}">15:00-15:30</text>
+      <text style="color:{{list[1500] == 0?'#ababab':''}} {{list[1500] == 1?'#fff':''}}  {{list[1500] == 2?'#ff7979':''}}">{{list[1500] == 1?"可预约":''}}{{list[1500] == 0?"不可预约":''}}{{list[1500] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1530] == 1?'appointment':''}}{{list[1530] == 2?'full':''}}{{list[1530] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1530" data-status='{{list[1530]}}'>
+      <text style="color:{{list[1530] == 0?'#ababab':''}} {{list[1530] == 1?'#fff':''}}  {{list[1530] == 2?'#ff7979':''}}">15:30-16:00</text>
+      <text style="color:{{list[1530] == 0?'#ababab':''}} {{list[1530] == 1?'#fff':''}}  {{list[1530] == 2?'#ff7979':''}}">{{list[1530] == 1?"可预约":''}}{{list[1530] == 0?"不可预约":''}}{{list[1530] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1600] == 1?'appointment':''}}{{list[1600] == 2?'full':''}}{{list[1600] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1600" data-status='{{list[1600]}}'>
+      <text style="color:{{list[1600] == 0?'#ababab':''}} {{list[1600] == 1?'#fff':''}}  {{list[1600] == 2?'#ff7979':''}}">16:00-16:30</text>
+      <text style="color:{{list[1600] == 0?'#ababab':''}} {{list[1600] == 1?'#fff':''}}  {{list[1600] == 2?'#ff7979':''}}">{{list[1600] == 1?"可预约":''}}{{list[1600] == 0?"不可预约":''}}{{list[1600] == 2?"只接受门诊":''}}</text>
+    </view>
+    <view class="appotime {{list[1630] == 1?'appointment':''}}{{list[1630] == 2?'full':''}}{{list[1630] == 0?'unappointment':''}}" bindtap='click' data-statu="open" data-timeId="1630" data-status='{{list[1630]}}'>
+      <text style="color:{{list[1630] == 0?'#ababab':''}} {{list[1630] == 1?'#fff':''}}  {{list[1630] == 2?'#ff7979':''}}">16:30-17:00</text>
+      <text style="color:{{list[1630] == 0?'#ababab':''}} {{list[1630] == 1?'#fff':''}}  {{list[1630] == 2?'#ff7979':''}}">{{list[1630] == 1?"可预约":''}}{{list[1630] == 0?"不可预约":''}}{{list[1630] == 2?"只接受门诊":''}}</text>
+    </view>
+
+<view class="appotime {{list[1630] == 1?'appointment':''}}{{list[1630] == 2?'full':''}}{{list[1630] == 0?'unappointment':''}}"  data-timeId="1630" data-status='{{list[1630]}}' style="visibility:hidden">
+      <text style="color:{{list[1630] == 0?'#ababab':''}} {{list[1630] == 1?'#fff':''}}  {{list[1630] == 2?'#ff7979':''}}">16:30-17:00</text>
+      <text style="color:{{list[1630] == 0?'#ababab':''}} {{list[1630] == 1?'#fff':''}}  {{list[1630] == 2?'#ff7979':''}}">{{list[1630] == 1?"可预约":''}}{{list[1630] == 0?"不可预约":''}}{{list[1630] == 2?"只接受门诊":''}}</text>
+    </view>
+
+
+  </view>
+
+
+
+
+</view>
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+ 
+  <!--drawer content-->
+  <view class="drawer_title">请填写预约信息</view>
+  <view class="drawer_content">
+    <view class="top grid">
+      <!-- <label class="title col-0">姓名</label> -->
+      <input class="input_base input_h30 col-1" name="userName" value="" bindinput="xing" placeholder='请输入姓名'></input>
+    </view>
+    <view class="top grid">
+      <!-- <label class="title col-0">手机</label> -->
+      <input type="number" class="input_base input_h30 col-1" bindinput="tel" maxlength="11" value="" placeholder='请输入手机号码'></input>
+    </view>
+    <view class="top bottom" style="text-align:center;padding-top:24px;font-size:26rpx;color:#f44336;width:74%;margin:0 auto">
+      {{notice_message}}
+    </view>
+  </view>
+  <view class="btn_ok" bindtap="hide" data-statu="close">确定</view>
+</view>
+
+
+<!-- 弹窗 -->
+<!-- <view class="modal-box" hidden="{{flag}}">
+  <view class="modal-body">
+    <view class="modal-content">
+      <view style='text-align:right'>
+        <image catchtap='hides' mode='aspectFill' src="/image/close.png" style="width:50rpx;height:50rpx;padding-top:20rpx;padding-right:20rpx"></image>
+      </view>
+      <!-- <text class='exit' catchtap='hides'>X</text> -->
+      <!-- <input type="text" name="userName" placeholder='请输入姓名' placeholder-class="places" bindinput="xing"></input>
+      <input type="text" placeholder='请输入手机号' placeholder-class="places" bindinput="tel" maxlength="11"></input>
+      <button bindtap="hide" class='comfir'>确定</button>
+    </view>
+  </view>
+</view> --> 
+<!-- 模糊层 -->
+<view class='loading' hidden='{{flags}}'>
+
+</view>

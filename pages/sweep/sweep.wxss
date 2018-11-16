@@ -1,0 +1,5 @@
+
+.container .img1{width: 476rpx;height: 476rpx;margin-bottom: 120rpx;}
+.container button{width: 542rpx;height: 90rpx;color: #fff;font-weight: 600;line-height: 90rpx;background-color: #44b29f;letter-spacing: 4rpx;font-size: 32rpx;text-align: center;border-radius: 80rpx;cursor: pointer}
+.container text{font-size: 24rpx;color: #9c9c9c;margin-top: 15rpx;}
+.container .show{width: 100%; color: #666;background-color: #fff; height: auto; }

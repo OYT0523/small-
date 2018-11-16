@@ -1,0 +1,42 @@
+
+page{background-color: #f8fcfb;height: 100%}
+.tab-h{height: 120rpx;width: 100%; box-sizing: border-box;line-height: 120rpx;background: #fff; font-size: 30rpx;color: #686868; white-space: nowrap;z-index: 99;border-bottom: 1px solid #dedede}
+.tab-item{width:33.3%;display: inline-block;text-align: center;height: 120rpx;z-index: 363;position: relative}
+.tab-item.active{color: #42b2a6;position: relative;}
+.tab-item.active:after{ content: "";display: block;height: 8rpx;width:100%;background: #42b2a6;position: absolute; bottom: 0;left: 5rpx;border-radius: 16rpx;}
+.tab-content{margin-top: 25rpx;}
+.scoll-h{height: 100%;}
+.msg{background-color: #fff;margin-bottom: 25rpx;border-top:1px solid #dedede }
+
+.patient{width: 100%;height: 160rpx;border-bottom: 1px solid #dedede;margin-left: 30rpx;}
+.patient image{width: 120rpx;height: 120rpx;float: left;margin-top: 20rpx;border-radius:50% }
+.patient text.status{float: right;display: block;background-color: #3fb2a3;margin-right: 60rpx;border-radius: 10rpx;margin-top: 52rpx;width: 116rpx;height: 44rpx;font-size: 24rpx;color: #fff;text-align:center;line-height: 44rpx;}
+.Info{width: 400rpx;display: block;float: left;margin-left: 20rpx;margin-top: 40rpx;}
+.Info .name{font-size: 28rpx;color: #090909;font-weight: 600;margin-bottom: 20rpx;}
+.Info .time{font-size: 22rpx;color: #5f5f5f;}
+
+.doctorInforation{background-color: #fff;width: 100%;border-bottom: 1px solid #dedede;}
+.doctorInforation image{width: 32rpx;height: 32rpx;}
+.doctorInforation text{font-size: 28rpx;color: #090909;margin-left: 20rpx;}
+.doctorInforation image{float: left;margin-left: 30rpx;margin-right: 20rpx;margin-top: 10rpx;}
+.doctorInforation view{width: 100%;display: block}
+.doctorInforation view:first-child{margin-top: 35rpx;}
+.doctorInforation view:nth-child(2){margin-top: 40rpx;}
+.doctorInforation view:last-child{margin-top: 40rpx;margin-bottom: 40rpx;}
+
+.unauthorized{margin-top:400rpx;margin-left: 270rpx; }
+.doctorTime{height: 50rpx;line-height: 50rpx;}
+.duans{float: left;height: 50rpx;line-height: 17.5rpx;}
+
+.point{width: 18rpx;height: 18rpx;border-radius: 50%;background-color: red;position: absolute;top: 35rpx;}
+
+.loading{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(0,0,0,0.3);
+  overflow: hidden;
+  z-index: 999;
+}
+.cancel{float: right;display: inline-block;background-color: #3fb2a3;color: #fff !important;margin-right:35rpx;height:44rpx;width:140rpx;text-align:center;line-height:44rpx;border-radius:10rpx;}

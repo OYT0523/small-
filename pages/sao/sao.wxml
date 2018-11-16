@@ -1,0 +1,28 @@
+
+  <view  hidden='{{displayY}}'>
+     <!-- <view class='stap'>
+      <text class='name'>{{patientInfo.realname}}</text>
+      <text class='kl'>您的排队号码是</text>
+      <text class='number'>{{patientInfo.user_code}}</text>
+      <text class='time'>当前时间是:{{currentYear}} {{currentDay}}</text>
+     </view> -->
+     <view style='margin-top:50rpx;'>前面还有{{patientInfo.frontPeople}}人</view>
+     <canvas canvas-id="myC" style="border: 1px solid #dedede;border-radius:15rpx;height:400rpx;margin:50rpx auto 0;background-color: #fff"/>
+     <view class='jie'  bindtap='baocun'>保存图片</view>
+     <view class='daying' bindtap='daying'>打印号码</view>
+     <view class='wenzi'>如需纸质号码可以直接打印</view> 
+  </view>
+  <view class='none' hidden='{{display}}'>
+     <view>您还没有预约</view>
+  </view>
+ 
+
+
+<modal hidden="{{hiddenmodalput}}" title="请输入手机号" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text'placeholder="请输入内容"  bindinput="numb"/>
+</modal>
+
+<!-- 模糊层 -->
+<view class='loading' hidden='{{flags}}'>
+   
+</view>

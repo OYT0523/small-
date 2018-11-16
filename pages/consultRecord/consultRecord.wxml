@@ -1,0 +1,21 @@
+<!--pages/consultRecord/consultRecord.wxml-->
+<block wx:for="{{consultRecode}}" wx:for-item = "item"  wx:key>
+ <view class='consults' bindtap='click'  data-doctorID='{{item.doctor_id}}' data-phoneID='{{item.phone}}'>
+   <view class='imgs'>
+     <image src='{{item.avatar}}' mode='aspectFill'></image>
+   </view>
+   <view class='mesg'>      
+       <view class='status'>
+          <view class='name'>{{item.name}}</view>
+          <view class='tomm'>{{item.last_msg}}</view>
+       </view>
+       <view class='time'>
+          <view class='times'>{{item.create_time}}</view>
+          <block wx:if="{{item.count !== 0}}">
+           <view class='num'>{{item.count}}</view>
+          </block>
+       </view>
+   </view>
+ </view>
+</block>
+<view class='records' hidden='{{display}}'>{{recorde}}</view>

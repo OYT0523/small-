@@ -1,0 +1,60 @@
+<!-- <view class='doctorInfo'>
+   <view class='head' style='background-image:url(/image/backdrop.png);background-size:100% 170px;'>
+      <view style=' width:140rpx;height:140rpx;' style='display:block'>
+         <image src='{{item.avatar}}' mode='aspectFill' style=' width:140rpx;height:140rpx;'></image>
+      </view>
+      <text class='name'>{{item.name}}</text>
+   </view>
+   <view class='synopsis'>
+      <text class=' summary'>简介</text>
+      <text class='introduce'>{{item.description}}</text>  
+   </view>
+  </view>    -->
+<!-- <view style='width:100%;margin:40rpx;height:170rpx;line-height:170rpx'>
+  <view style='overflow:hidden;'>
+      <image src='{{ item.avatar }}' mode='aspectFill' style='width:150rpx;height:150rpx;border-radius:50%;float:left;margin-right:20rpx;'></image>
+      <view style='height:50rpx;display:inline-block'>
+        <text style='padding-right:20rpx'> {{ item.name }}</text>
+        <text style='font-size:27rpx;color:#bbb;'>{{ item.zhicheng }}</text>
+      </view>
+      
+  </view>
+</view>  -->
+<view style='width:100%;height:100%;background-color:#f0f0f0'>
+
+  <view style='position:relative'>
+    <view style='width:100%;height:400rpx;background-color:#2854b3;position:absolute'></view>
+    <view style='width:680rpx;height:800rpx;background-color:#ffffff;margin:auto;position:absolute;top:1300rpx;left:0;right:0;bottom:0;'></view>
+    <image src='{{ item.avatar }}' mode='aspectFill' style='position:absolute;top:500rpx;left:0;right:0;bottom:0;width:200rpx;height:200rpx;border-radius:50%;margin:auto;border:3px solid #ffffff'></image>
+    <view style='width:100%;height:60rpx;position:absolute;top:380rpx;left:0;right:0;bottom:0;text-align:center;font-size: 44rpx;'>
+      {{ item.name }}
+    </view>
+    <view style='width:100%;height:60rpx;font-size:26rpx;position:absolute;top:450rpx;left:0;right:0;bottom:0;text-align:center;'>
+      <view style='background-color:#7586ab;display:inline-block;color:#ffffff;padding:10rpx;padding-right:20rpx;border-radius:3%'>
+        {{ item.zhicheng }}
+      </view>
+    </view>
+    <view style='width:100%;height:60rpx;font-size:26rpx;position:absolute;top:520rpx;left:0;right:0;bottom:0;text-align:center;'>
+      <view wx:for="{{item.shanchang}}" wx:for-index="index" wx:for-item="sc" style='background-color:#ffffff;display:inline-block;color:#7e98d1;padding:6rpx;border-radius:3%;border:1px solid #7e98d1;margin-left:10rpx;font-size:24rpx'>
+        {{ sc }}
+      </view>
+    </view>
+    <view style='width:100%;height:60rpx;font-size:26rpx;position:absolute;top:620rpx;left:0;right:0;bottom:0;text-align:center;line-height:60rpx'>
+      <view style='font-size: 35rpx; color: #333; display: flex; justify-content: center; align-items: center;'>
+        <image src="/image/card.png" style="width: 50rpx; height: 50rpx; margin-right: 10rpx;"></image>
+        个人简介
+      </view>
+    </view>
+    <view style='width:650rpx;font-size:26rpx;position:absolute;top:690rpx;left:0;right:0;bottom:0;text-align:center;margin:0 auto'>
+      <scroll-view scroll-y style="height: 130rpx;">
+        <view style='font-size: 30rpx; color: #979797; display: flex; justify-content: center; align-items: center;line-height:1.5'>
+          {{ item.jianjie }}
+        </view>
+      </scroll-view>
+    </view>
+    <view style='width:100%;height:150rpx;font-size:26rpx;position:absolute;top:890rpx;left:0;right:0;bottom:0;text-align:center;'>
+      <text catchtap='appo' data-doctorid="{{item.doctor_id}}" data-online="{{item.app_online}}" style='display:inline;padding:15rpx 75rpx;background-color:#2854b3;font-size: 34rpx;color:#ffffff;border-radius: 10rpx;margin-right:10rpx;'>在线预约</text>
+      <text catchtap='chat' data-doctorid="{{item.doctor_id}}" data-online="{{item.chat}}" style='display:inline;padding:15rpx 75rpx;background-color:#ffffff;font-size: 34rpx;color:#2854b3;border-radius: 10rpx;border:1px solid #2854b3;margin-left:10rpx;'>在线咨询</text>
+    </view>
+  </view>
+</view>

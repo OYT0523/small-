@@ -1,0 +1,24 @@
+
+page{background-color: #f8fcfb;text-align: center}
+.stap{background-color: #fff;margin: 60rpx 40rpx;text-align: center;border: 1px solid #dedede;border-radius:15rpx; }
+.name{display: block;padding-top: 50rpx;padding-bottom: 50rpx;font-size: 34rpx;color: #3e3e3e;}
+.kl{display: block;font-size: 40rpx;color: #3e3e3e;padding-bottom: 50rpx;}
+.number{display: block;font-size: 66rpx;padding-bottom: 50rpx;color: #3e3e3e;}
+.time{display: block;padding-bottom: 50rpx;color: #595959;font-size: 28rpx;}
+
+.daying{background-color:#44b29f;width: 300rpx;height: 100rpx;color: #fff;text-align: center;display: block;margin: 80rpx auto 0;line-height: 100rpx;border-radius:50rpx;}
+.wenzi{font-size: 24rpx;color: #9c9c9c;margin-top: 20rpx;}
+
+.none{background-color: #fff;margin: 50rpx 40rpx;text-align: center;height: 300rpx;}
+.none view{margin-top: 100rpx;}
+.jie{background-color: orange;width: 420rpx;height: 100rpx;text-align: center;line-height: 100rpx;color: #fff;
+  margin: 10rpx auto 0;border-radius:50rpx;display: block;margin-top: 100rpx;}
+  .loading{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(0,0,0,0.3);
+  overflow: hidden;
+  z-index: 999;
+}

@@ -1,0 +1,26 @@
+<!-- myself.wxml -->
+<view class='myInfo'>
+   <!-- <view class='head' style='background-image:url(/image/backdrop.png);background-size:100% 170px;'> -->
+    <view class='head'>
+      <image src='/image/backdrop.png' class='img9'></image>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" style='width:140rpx;height:140rpx;' class='img10'></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+   </view>
+
+   <view class='point'>
+     <view class='appointment' bindtap='click'>
+      <text class='points' hidden='{{showhide}}'></text>
+      <image src='/image/oppo.png' class='img4'></image>
+      <text>预约记录</text>
+     </view>
+    <view class='consult' bindtap='clicks'>
+        <image src='/image/consu.png' class='img6'></image>
+        <text>咨询记录</text> 
+    </view>
+    <view class='notice' bindtap='knows'>
+        <image src='/image/know.png' class='img8'></image>
+        <text>预约须知</text> 
+    </view>
+   </view>
+</view>
+

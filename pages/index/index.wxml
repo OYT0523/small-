@@ -1,0 +1,37 @@
+<!-- index.wxml -->
+  <view>
+   <image src='/image/banner.png' style='width:100%' mode='widthFix'></image>
+  </view>
+  <view style='text-align:center;display:{{ loading }}'>
+    <image style='width:150rpx;height:150rpx' src="/image/loding.gif" mode='aspectFill'></image>
+    <text style="display:block;font-size:26rpx">正在加载医生列表</text>
+  </view>
+<block wx:for="{{list}}"wx:for-item = "item" wx:key="list">
+  <view class='doctorList' catchtap='detail' data-doctorId='{{item.doctor_id}}'>
+    <view class='kkk'>
+      <view style='width:120rpx;height:120rpx;' class='img'>
+        <image src='{{item.avatar}}'mode='aspectFill' style='width:100%;height:100%'></image>
+      </view>
+      <text class='doctorName'>{{item.name}}</text>
+      <button class='b1' catchtap='consult' data-doctorID='{{item.doctor_id}}' style='z-index=999' hidden='{{flag}}' data-chatID='{{item.chat}}'>咨询</button>
+      <button class='b2' catchtap='appo' data-doctorID='{{item.doctor_id}}' hidden='{{flags}}' data-online="{{item.app_online}}">预约</button>
+    </view>
+  </view>
+</block>
+ 
+
+ <!-- 弹窗 -->
+<view class="modal-box" hidden="{{hiddenmodalput}}">
+    <view class="modal-body">
+      <view class="modal-content">
+        <view class='login'>授权登录</view>
+        <image src='/image/logog.png'></image>
+        <view class='hosp'>允许登录上海曲阳口腔</view>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='comfir' bindtap='click'>授权微信账号登录               </button>
+      </view>
+    </view>
+</view> 
+
+
+
+
